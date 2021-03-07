@@ -1,16 +1,33 @@
 {
-    "name": "kangchao/dingding-log",
-    "description": "Log to DingDing bot",
-    "type": "library",
-    "require": {
-        "guzzlehttp/guzzle": "^7.2",
-        "monolog/monolog": "^2.2"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "KangChao",
-            "email": "kangchaolove2009@163.com"
-        }
-    ]
+	"name": "kangchao/dingding-log",
+	"description": "Log to DingDing bot",
+	"type": "library",
+	"require": {
+		"guzzlehttp/guzzle": "^7.2",
+		"monolog/monolog": "^2.2",
+		"illuminate/support": "^8.31",
+		"illuminated/helper-functions": "^8.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"KangChao\\dingDingLog\\": "./src/"
+		}
+	},
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "KangChao",
+			"email": "kangchaolove2009@163.com"
+		}
+	],
+	"extra": {
+		"laravel": {
+			"providers": [
+				"DingDingLogServiceProvider"
+			],
+			"aliases": {
+				"Debugbar": "KangChao\\dingding-log\\Facade"
+			}
+		}
+	}
 }
