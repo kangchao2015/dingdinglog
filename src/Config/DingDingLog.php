@@ -5,5 +5,4 @@ return [
     'auth-ways' => [
         'keyword' => 'x'
     ]
-
 ];

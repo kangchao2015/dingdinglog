@@ -3,6 +3,7 @@
 	"description": "Log to DingDing bot",
 	"type": "library",
 	"require": {
+		"php": "^7.0",
 		"guzzlehttp/guzzle": "^7.2",
 		"monolog/monolog": "^2.2",
 		"illuminate/support": "^8.31",
@@ -23,10 +24,10 @@
 	"extra": {
 		"laravel": {
 			"providers": [
-				"DingDingLogServiceProvider"
+				"KangChao\\dingding-log\\DingDingLogServiceProvider"
 			],
 			"aliases": {
-				"Debugbar": "KangChao\\dingding-log\\Facade"
+				"Debuger": "KangChao\\dingding-log\\Facades\\Debuger"
 			}
 		}
 	}
